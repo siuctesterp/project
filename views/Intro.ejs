@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HTML Project</title>
+</head>
+
+<body onload="initialize();">
+<canvas id=" canvas" width="800" height="800">
+	Sorry - This page uses <code>canvas</code> and
+	your browser doesn't support it.
+	<script>
+
+		const CENTER_X = 250;
+		const CENTER_Y = 250;
+		const RADIUS = 150;
+		const TITLE_BASELINE = 75;
+		const EYE_WIDTH = 8;
+		const EYE_HEIGHT = 6;
+		let random = 0;
+		var canvas;
+		var ctx;
+
+
+		function initialize() {
+			canvas = document.getElementById("canvas");
+			ctx = canvas.getContext("2d");
+			canvas.addEventListener("click", function (event) {
+				let x = event.offsetX;
+				let y = event.offsetY;
+				if (random == 0) {
+					drawFace(x, y);
+					random = random + 1;
+				}
+				else if (random == 1) {
+					drawFace1(x, y);
+					random = random + 1;
+				}
+				else if (random == 2) {
+					drawFace2(x, y);
+					random = random + 1;
+				}
+				else if (random == 3) {
+					drawFace3(x, y);
+					random = random + 1;
+				}
+
+			});
+
+		}
+		function drawFace(CENTER_X, CENTER_Y) {
+			ctx.fillStyle = "yellow";
+			// draw circle
+			ctx.beginPath();
+			ctx.arc(CENTER_X, CENTER_Y, RADIUS, 0, 2 * Math.PI);
+			ctx.fill();
+			ctx.stroke();
+
+		}
+		function drawFace1(CENTER_X, CENTER_Y) {
+
+			ctx.fillStyle = "deepskyblue";
+			ctx.fillRect(CENTER_X, CENTER_Y, 150, 350);
+
+		}
+		function drawFace2(CENTER_X, CENTER_Y) {
+			ctx.fillStyle = "purple";
+			ctx.fillRect(CENTER_X, CENTER_Y, 250, 250);
+		}
+		function drawFace3(CENTER_X, CENTER_Y) {
+			ctx.fillStyle = "cyan";
+			ctx.fill();
+
+			ctx.scale(0.75, 1);
+			ctx.beginPath();
+			ctx.arc(CENTER_X, CENTER_Y, RADIUS, 0, Math.PI * 2, false);
+			ctx.stroke();
+			ctx.closePath();
+		}
+	</script>
+	</canvas>
+</body>
+<style>
+	canvas {
+		border: thin solid black;
+	}
+</style>
+<font face="Comic sans MS" size="6">
+	<br>
+	<b>TO DRAW SHAPES ON THE CANVAS ABOVE JUST CLICK AT RANDOM LOCATIONS!!!!!!!
+		<br>
+		HERE ARE THE 4 RANDOM SHAPES WHICH YOU HAVE DRAWN BY CLICKING ON THE CANVAS</b>
+</font>
+
+
+<body>
+	<table id="header" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="cyan">
+		<tr>
+			<td>
+				<table border="0" cellpadding="15" cellspacing="0" width="90%" align="center">
+					<tr>
+						<td>
+
+
+						</td>
+
+						<td>
+							<font face="Comic sans MS" size="6">
+								<b>DHANUSH_PARASA</b>
+							</font>
+						</td>
+
+						<td width="15%">
+
+						</td>
+
+						<td>
+							<a href="#home" style="text-decoration:none">
+								<font face="Verdana" size="5" color=black>
+									Home
+								</font>
+							</a>
+						</td>
+
+						<td>
+							|
+						</td>
+
+						<td>
+							<a href="#about" style="text-decoration:none">
+								<font face="Verdana" size="5" color=black>
+									About
+								</font>
+							</a>
+						</td>
+
+						<td>
+							|
+						</td>
+
+						<td>
+							<a href="#projects" style="text-decoration:none">
+								<font face="Verdana" size="5" color=black>
+									Photo Album
+								</font>
+							</a>
+						</td>
+
+						<td>
+							|
+						</td>
+
+						<td>
+							<a href="#achievements" style="text-decoration:none">
+								<font face="Verdana" size="5" color=black>
+									Education
+								</font>
+							</a>
+						</td>
+
+						<td>
+							|
+						</td>
+
+						<td>
+							<a href="#contact" style="text-decoration:none">
+								<font face="Verdana" size="5" color=black>
+									Survey Form
+								</font>
+							</a>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+
+
+
+	<table id="home" border="1" width="100%" cellpadding="20" cellspacing="0" bgcolor="black">
+		<tr>
+			<td>
+				<table border="0" cellpadding="15" cellspacing="0" width="90%" align="center">
+					<tr>
+						<td align="center" valign="middle">
+							<h3>
+								<font face="Times New Roman" size="6" color="#ffffff">
+									Welcome to my Web Application!
+								</font>
+							</h3>
+
+							<h2>
+								<font face="Verdana" size="6" color="#4CAF50">
+								</font>
+							</h2>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+
+
+
+	<table id="about" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="black">
+		<tr>
+			<td>
+				<table border="0" cellpadding="15" cellspacing="0" width="80%" align="center">
+					<tr>
+						<td height="180" align="center" valign="middle" colspan="2">
+							<font face="Verdana" size="7" color="Cyan">
+								About Me
+							</font>
+							<hr color="cyan" width="90">
+						</td>
+					</tr>
+
+					<tr>
+						<td width="40%">
+							<img src="/IMG_4779.jpg" width="750" height="1000">
+						</td>
+
+						<td width="60%">
+							<font face="Verdana" size="5" color="white">
+								This course which I am taking has the course number
+								CS-491-953 and is named as Web Application Devleopment.
+								The professor for this course is Dr.Dunren Che
+								at Southern Illinois Univerity - Carbondale.
+								<hr color="black">
+								Within this course we have been learning about HTML. HTML is an acronym which stands for
+								Hyper Text Markup Language which is used for creating web pages and web applications.
+								Let's see what is meant by Hypertext Markup Language, and Web page.
+
+								<hr color="black">
+								Hyper Text: HyperText simply means "Text within Text." A text has a link within it, is a
+								hypertext. Whenever you click on a link which brings you to a new webpage, you have
+								clicked on a hypertext. HyperText is a way to link two or more web pages (HTML
+								documents) with each other.
+								<hr color="black">
+								Markup language: A markup language is a computer language that is used to apply layout
+								and formatting conventions to a text document. Markup language makes text more
+								interactive and dynamic. It can turn text into images, tables, links, etc.
+								<hr color="black">
+								Web Page: A web page is a document which is commonly written in HTML and translated by a
+								web browser. A web page can be identified by entering an URL. A Web page can be of the
+								static or dynamic type. With the help of HTML only, we can create static web pages.
+
+								<hr color="black">
+								Thank You for your time,
+								<br>
+								<b>Dhanush Parasa</b>
+							</font>
+						</td>
+					</tr>
+				</table>
+				<hr color="black">
+				<hr color="black">
+				<hr color="black">
+			</td>
+		</tr>
+	</table>
+
+
+
+	<table id="projects" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#c2c0c3">
+		<tr>
+			<td>
+				<table border="0" cellpadding="15" cellspacing="0" width="80%" align="center">
+					<tr>
+						<td height="180" align="center" valign="middle" colspan="2">
+							<font face="Verdana" size="7" color="black">
+								MY PHOTO ALBUM
+							</font>
+							<hr color="black" width="90">
+						</td>
+					</tr>
+
+					<tr>
+						<td WIDTH="45%">
+							<img src="/IMG_4778.JPG" width="75%">
+						</td>
+
+						<td width="45%">
+							<img src="/IMG_4759.JPG" width="75%">
+						</td>
+					</tr>
+					<tr>
+						<td WIDTH="45%">
+							<img src="/IMG_4765.JPG" width="75%">
+						</td>
+
+						<td width="45%">
+							<img src="/throw back.JPG" width="75%">
+						</td>
+					</tr>
+					<tr>
+						<td WIDTH="45%">
+							<img src="/IMG_42642.JPG" width="75%">
+						</td>
+						<td WIDTH="45%">
+							<img src="/IMG_4777.JPG" width="75%">
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+
+
+
+	<table id="achievements" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="black">
+		<tr>
+			<td>
+				<table border="0" cellpadding="15" cellspacing="0" width="80%" align="center">
+					<tr>
+						<td height="180" align="center" valign="middle">
+							<font face="Verdana" size="7" color="cyan">
+								My Eductional Degree's
+								<hr color="cyan" width="100">
+							</font>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<font face="Verdana" size="4" color="white">
+								<ul>
+									<li>
+										<b>Student at Shree Chaitanya</b>
+										<ul>
+											<li>
+												March,2015 - April 2017
+											</li>
+											<li>
+												Persued my Intermediate Degree in MPC (Maths:Phyics:Chemistry)
+											</li>
+										</ul>
+									</li>
+
+									<li>
+										<hr color="black">
+										<hr color="black">
+										<hr color="black">
+										<b>Student at KLUniveristy</b>
+										<ul>
+											<li>
+												July,2017 - March 2021
+											</li>
+											<li>
+												Persued my Bachalor's in Computer Science & Computer Engineering
+											</li>
+										</ul>
+									</li>
+
+									<li>
+										<hr color="black">
+										<hr color="black">
+										<hr color="black">
+										<b>Student at Southern Illinois Univerity - Carbondale</b>
+										<ul>
+											<li>
+												August 2021 - Present
+											</li>
+											<li>
+												Selected in a Masters Program in Computer Science
+											</li>
+											<hr color="black">
+											<hr color="black">
+											<hr color="black">
+											<hr color="black">
+											<hr color="black">
+										</ul>
+									</li>
+
+								</ul>
+
+							</font>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+
+
+
+	<table id="contact" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#c2c0c3">
+		<tr>
+			<td>
+				<table border="0" cellpadding="15" cellspacing="0" width="80%" align="center">
+					<tr>
+						<td height="180" align="center" valign="middle" colspan="2">
+							<font face="Verdana" size="7" color="black">
+								My Personal Survey Form
+							</font>
+							<hr color="black" width="90">
+						</td>
+					</tr>
+
+					<tr>
+						<td align="center" valign="top">
+							<table border="0" width="50%" cellpadding="15" cellspacing="0" align="center"
+								bgcolor="black">
+
+								<tr>
+									<td width="30%">
+
+									</td>
+									<td width="70%">
+										<a href="/surveypage">
+											<button>
+												<font face="Verdana" size="6" color="black">
+													<b>Go to my Survey Page</b>
+												</font>
+											</button>
+										</a>
+										<hr color="black">
+										<hr color="black">
+									</td>
+								</tr>
+							</table>
+						</td>
+
+					</tr>
+					<tr>
+						<td colspan="2">
+
+
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+
+
+	<p>
+		<span style="font-size: 26px">
+			Please select a shape:
+		</span> <br>
+		<img src="/shapes.png" usemap="#shapes"
+			alt="Four shapes are available: a red hollow box, a green circle, a blue triangle, and a yellow four-pointed star.">
+		<map name="shapes">
+			<area shape=rect coords="50,50,100,100"> <!-- the hole in the red box -->
+			<area shape=rect coords="25,25,125,125" href="red.html" alt="Red box.">
+			<area shape=circle coords="200,75,50" href="green.html" alt="Green circle.">
+			<area shape=poly coords="325,25,262,125,388,125" href="blue.html" alt="Blue triangle.">
+			<area shape=poly coords="450,25,435,60,400,75,435,90,450,125,465,90,500,75,465,60" href="yellow.html"
+				alt="Yellow star.">
+		</map>
+	</p>
+
+
+
+	<table id="footer" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="black">
+		<tr>
+			<td>
+				<table border="0" cellpadding="15" cellspacing="0" width="90%" align="center">
+					<tr>
+						<td width="80%" valign="top">
+							<font face="Verdana" color="#4CAF50" size="5">
+								©Copyright by Dhanush Parasa
+								All rights reserved.
+							</font>
+						</td>
+
+						<td width="10%">
+							<font face="arial" color="black" size="5">
+								<a href="#header" style="text-decoration:none">
+									<font face="Verdana" color="#4CAF50" size="6">
+										<b>TOP</b>
+									</font>
+								</a>
+							</font>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+
+
+
+</body>
+
+</html>
