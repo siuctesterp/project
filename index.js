@@ -10,24 +10,13 @@ app.set('view engine', 'ejs');
 const viewDir = path.join(__dirname + '/views');
 app.set('views', viewDir);
 app.use(express.static(__dirname + '/public'));
-console.log(path.join(__dirname));
-
-function getDirectories(path) {
-	return fs.readdirSync(path).filter(function (file) {
-		return fs.statSync(path + '/' + file);
-	});
-}
-
-console.log('views', getDirectories(path.join('')));
-console.log('views', getDirectories(path.join(__dirname + '/views')));
-console.log('views', getDirectories(path.join(__dirname + '/')));
 
 app.get('/', function (req, res) {
 	res.redirect('/intro');
 });
 
 app.get('/intro', function (req, res) {
-	res.render('intro.ejs', {});
+	res.render('Intro.ejs', {});
 });
 
 app.get('/surveypage', function (req, res) {
