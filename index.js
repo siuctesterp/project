@@ -8,17 +8,17 @@ app.use(parser.json());
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname + '/views'));
 app.use(express.static(__dirname + '/public'));
-console.log(path.join(__dirname ));
+console.log(path.join(__dirname));
 
 function getDirectories(path) {
-  return fs.readdirSync(path).filter(function (file) {
-    return fs.statSync(path+'/'+file).isDirectory();
-  });
+	return fs.readdirSync(path).filter(function (file) {
+		return fs.statSync(path + '/' + file).isDirectory();
+	});
 }
 
-console.log("views",getDirectories(path.join("/views"));
-console.log("views",getDirectories(path.join(__dirname + '/views'))
-console.log("views",getDirectories(path.join(__dirname + '/'))
+console.log('views', getDirectories(path.join('/views')));
+console.log('views', getDirectories(path.join(__dirname + '/views')));
+console.log('views', getDirectories(path.join(__dirname + '/')));
 
 app.get('/', function (req, res) {
 	res.redirect('/intro');
