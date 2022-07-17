@@ -1,6 +1,7 @@
 var parser = require('body-parser');
 var path = require('path');
 var express = require('express');
+var fs = require('fs');
 const { sendEmail } = require('./mailer');
 var app = express();
 app.use(parser.urlencoded({ extended: false }));
@@ -12,11 +13,11 @@ console.log(path.join(__dirname));
 
 function getDirectories(path) {
 	return fs.readdirSync(path).filter(function (file) {
-		return fs.statSync(path + '/' + file).isDirectory();
+		return fs.statSync(path + '/' + file);
 	});
 }
 
-console.log('views', getDirectories(path.join('/views')));
+console.log('views', getDirectories(path.join('')));
 console.log('views', getDirectories(path.join(__dirname + '/views')));
 console.log('views', getDirectories(path.join(__dirname + '/')));
 
