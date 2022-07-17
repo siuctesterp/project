@@ -7,7 +7,8 @@ var app = express();
 app.use(parser.urlencoded({ extended: false }));
 app.use(parser.json());
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname + '/views'));
+const viewDir = path.join(__dirname + '/views');
+app.set('views', viewDir);
 app.use(express.static(__dirname + '/public'));
 console.log(path.join(__dirname));
 
